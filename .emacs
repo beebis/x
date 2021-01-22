@@ -115,7 +115,7 @@ if the symbol is -foo, then expand to module-name-foo."
 (defun auto-complete-for-go ()
   (auto-complete-mode 1))
 
-(add-hook 'go-mode-hook 'auto-complete-for-go)
+;;(add-hook 'go-mode-hook 'auto-complete-for-go)
 ;;(with-eval-after-load 'go-mode (require 'go-autocomplete))
 
 (defun select-previous-window ()
@@ -162,10 +162,10 @@ if the symbol is -foo, then expand to module-name-foo."
 
 ;;(require 'company)
 ;;(require 'company-go)
-(require 'auto-complete)
-(require 'go-autocomplete)
-(require 'auto-complete-config)
-(require 'telephone-line)
+;;(require 'auto-complete)
+;;(require 'go-autocomplete)
+;;(require 'auto-complete-config)
+;;(require 'telephone-line)
 
 ;;(ac-config-default)
 
