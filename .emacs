@@ -1,5 +1,5 @@
-(add-to-list 'load-path "~/.emacs.d/lisp")
-(add-to-list 'load-path "~/.emacs.d/lisp/bookmark-plus")
+;;(add-to-list 'load-path "~/.emacs.d/lisp")
+;;(add-to-list 'load-path "~/.emacs.d/lisp/bookmark-plus")
 (setq home (getenv "HOME"))
 ;;(server-start)
 
@@ -104,9 +104,9 @@ if the symbol is -foo, then expand to module-name-foo."
 	      (local-set-key (kbd "C-c .") 'godef-jump)
 	      (local-set-key (kbd "C-c *") 'pop-tag-mark)
 	      (local-set-key (kbd "C-c C-n") 'forward-list)
-	      (local-set-key (kbd "C-c C-p") 'backward-list)
-	      (require 'go-guru)
-              (require 'go-imports)))
+	      (local-set-key (kbd "C-c C-p") 'backward-list)))
+	      ;;;(require 'go-guru)
+              ;;;(require 'go-imports)))
 ;;;	      (define-key go-mode-map "\C-c\C-c" 'compile)
 
 ;;;;	      (define-key go-mode-map "\C-cI" 'go-imports-insert-import)
@@ -149,16 +149,16 @@ if the symbol is -foo, then expand to module-name-foo."
   (add-to-list 'package-archives '("gnu" . "http://elpa.gnu.org/packages/")))
 
 
-(require 's)
+;;(require 's)
 
 ;;(require 'bookmark+)
-(require 'package)
-(require 'desktop)
-(require 'tramp)
-(require 'shell)
-(require 'ansi-color)
-(require 'xt-mouse)
-(require 'mouse)
+;;(require 'package)
+;;(require 'desktop)
+;;(require 'tramp)
+;;(require 'shell)
+;;(require 'ansi-color)
+;;(require 'xt-mouse)
+;;(require 'mouse)
 
 ;;(require 'company)
 ;;(require 'company-go)
@@ -167,9 +167,9 @@ if the symbol is -foo, then expand to module-name-foo."
 (require 'auto-complete-config)
 (require 'telephone-line)
 
-(ac-config-default)
+;;(ac-config-default)
 
-(add-hook 'shell-mode-hook 'my-shell-mode-hook)
+;;(add-hook 'shell-mode-hook 'my-shell-mode-hook)
 ;;(keymap-unset-key  (kbd "C-c >")   "shell-script-mode")
 ;;(keymap-unset-key  (kbd "C-c >")   "shell-script-mode")
 
@@ -191,22 +191,22 @@ if the symbol is -foo, then expand to module-name-foo."
 
 ;;(add-hook 'after-init-hook 'global-company-mode)
 
-(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
+;;(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 ;;(add-hook 'shell-mode-hook (lambda () (highlight-regexp "\\[OK\\]" "hi-green-b")))
-(add-hook 'shell-mode-hook (lambda () (goto-address-mode )))
-(add-hook 'shell-mode-hook 'compilation-shell-minor-mode)
+;;(add-hook 'shell-mode-hook (lambda () (goto-address-mode )))
+;;(add-hook 'shell-mode-hook 'compilation-shell-minor-mode)
 ;;(add-hook 'shell-mode-hook #'company-mode)
 ;;(define-key shell-mode-map (kbd "TAB") #'company-manual-begin)
 
 ;;(load "~/.emacs.d/lisp/virtual-desktops")
 ;;(virtual-desktops-mode 1)
 
-(xterm-mouse-mode)
-(xterm-mouse-mode t)
-(defun track-mouse (e))
-(setq mouse-wheel-follow-mouse 't)
-(defvar alternating-scroll-down-next t)
-(defvar alternating-scroll-up-next t)
+;;(xterm-mouse-mode)
+;;(xterm-mouse-mode t)
+;;(defun track-mouse (e))
+;;(setq mouse-wheel-follow-mouse 't)
+;;(defvar alternating-scroll-down-next t)
+;;(defvar alternating-scroll-up-next t)
 (defun alternating-scroll-down-line ()
   (interactive "@")
   (when alternating-scroll-down-next
@@ -221,10 +221,10 @@ if the symbol is -foo, then expand to module-name-foo."
 
 (set-display-table-slot standard-display-table 'vertical-border ?│)
 ;;(toggle-scroll-bar -1)
-(smartparens-global-mode 1)
+;;(smartparens-global-mode 1)
 (menu-bar-mode 1)
 (show-paren-mode 1)
-(telephone-line-mode 1)
+;;(telephone-line-mode 1)
 (display-time-mode 1)
 ;;(tool-bar-mode 0)
 
@@ -290,9 +290,9 @@ if the symbol is -foo, then expand to module-name-foo."
 ;;(require 'color-theme-modern)
 ;;(require 'kaolin-themes)
 
-(color-theme-initialize)
+;;(color-theme-initialize)
 ;;(autoload 'color-theme-approximate-on "color-theme-approximate")
-(color-theme-charcoal-black)
+;;(color-theme-charcoal-black)
 ;(color-theme-approximate-on)
 ;;(load-theme 'atom-dark' t)
 ;;(load-theme 'atom-one-dark' t)
@@ -309,7 +309,7 @@ if the symbol is -foo, then expand to module-name-foo."
 ;;(color-theme-solarized-dark)
 ;;(color-theme-sanityinc-solarized)
 ;;(setf shell-cd-regexp "\\(?:cd\\|z\\)")
-(set-face-foreground 'vertical-border (face-background 'default))
+;;(set-face-foreground 'vertical-border (face-background 'default))
 
 ;; (custom-set-variables
 ;;  ;; custom-set-variables was added by Custom.
@@ -330,8 +330,8 @@ if the symbol is -foo, then expand to module-name-foo."
 ;;  ;; Your init file should contain only one such instance.
 ;;  ;; If there is more than one, they won't work right.
 ;;  '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 161 :width normal)))))
-(custom-set-faces
- '(default ((t (:family "Delugia Nerd Font"  :slant normal :weight normal :height 161 :width normal)))))
+;;(custom-set-faces
+;; '(default ((t (:family "Delugia Nerd Font"  :slant normal :weight normal :height 161 :width normal)))))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
